@@ -9,46 +9,57 @@
     <meta name="author" content="태성투자대부">
     <title>전자어음할인이 가능한 발행 기업사 목록</title>
     <style>
-        
-     table {
-    width: 80%; /* 테이블 전체 너비를 80%로 설정 */
-    border-collapse: collapse;
-    margin: 20px auto;
-    table-layout: auto; /* 자동 레이아웃을 사용하여 각 셀의 너비가 자동으로 조정되도록 설정 */
-}
+        /* 테이블 스타일 */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            table-layout: auto;
+        }
 
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-    word-break: break-all;
-}
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            word-break: break-all;
+        }
 
-/* 헤더 셀 배경색을 연한 회색으로 변경 */
-th {
-   background-color: #f0f0f0; /* 연한 회색 */
-   font-weight: bold;
+        /* 헤더 셀 배경색을 연한 회색으로 변경 */
+        th {
+            background-color: #f0f0f0; /* 연한 회색 */
+            font-weight: bold;
+        }
 
-/* 첫 번째 열의 자음은 글씨 크기를 그대로 유지 */
-td:first-child {
-font-size: 14px; /* 첫 번째 열 자음 글씨 크기 */
-}
+        /* 첫 번째 열의 자음은 글씨 크기를 그대로 유지하고, 너비 고정 */
+        td:first-child {
+            font-size: 14px; /* 첫 번째 열 자음 글씨 크기 */
+            width: 5%; /* 첫 번째 열 너비 고정 (5%로 설정) */
+        }
 
-/* 두 번째 열 (기업사명)의 글씨 크기를 줄이기 */
-td:nth-child(2) {
-font-size: 8px; /* 두 번째 열 글씨 크기 */
-}
+        /* 두 번째 열 (기업사명)의 글씨 크기를 줄이기 */
+        td:nth-child(2) {
+            font-size: 8px; /* 두 번째 열 글씨 크기 */
+        }
 
-/* 첫 번째 열의 너비를 줄이기 */
-.consonant-cell {
-    width: 3%; /* 첫 번째 열의 너비를 3%로 설정 */
-}
+        /* 홀수 행과 짝수 행의 배경색을 다르게 설정 */
+        tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
 
-/* 두 번째 열은 나머지 70%를 차지 */
-td:not(.consonant-cell) {
-    width: 70%; /* 두 번째 열의 너비는 70%로 설정 */
-}
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+                font-size: 12px;
+            }
+            .consonant-cell {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
